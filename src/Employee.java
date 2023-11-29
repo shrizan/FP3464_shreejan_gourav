@@ -1,7 +1,7 @@
 import java.time.LocalDate;
 
 abstract public class Employee {
-    private String name;
+    private final String name;
     private int birthYear;
     private int age;
     private double monthlyIncome;
