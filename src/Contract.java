@@ -1,3 +1,4 @@
 public abstract class Contract {
-public abstract double employeeMonthlySalary();
+    // defining abstract method so that permanent and employee will have to implment this
+    public abstract double employeeMonthlySalary();
 }

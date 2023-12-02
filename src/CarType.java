@@ -1,3 +1,6 @@
 public enum CarType {
-    Sedan, Hatchback, SUV, Sport
+    Sedan,
+    Hatchback,
+    SUV,
+    Sport
 }
