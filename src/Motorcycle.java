@@ -4,4 +4,7 @@ public class Motorcycle extends Vehicle{
         super(make, plate, color, category);
         this.sidecar = sidecar;
     }
+    public boolean isSidecar() {
+        return sidecar;
+    }
 }

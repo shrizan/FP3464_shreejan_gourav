@@ -8,10 +8,28 @@ public class Tester extends Employee {
 
     public Tester(String name, int birthYear, int nbBugs, int rate, Vehicle employeeVehicle) {
         super(name, birthYear, 0, rate, employeeVehicle);
+        this.nbBugs = nbBugs;
+        System.out.println("We have a new employee: " + name + ", " + "a tester.");
     }
 
     @Override
     public double annualIncome() {
-        return getMonthlyIncome() * 12 + nbBugs * GAIN_FACTOR_ERROR;
+        return getMonthlyIncome() * 12 + nbBugs * GAIN_FACTOR_ERROR + super.annualIncome();
+    }
+
+    @Override
+    public String toString() {
+        return String.format(
+                """
+                        %s
+                        %s has an Occupation rate: %d%% and corrected %d bugs.
+                        His/Her estimated annual income is %.1f
+                        """,
+                super.toString(),
+                getName(),
+                getRate(),
+                nbBugs,
+                annualIncome()
+        ).trim();
     }
 }

@@ -7,4 +7,12 @@ public class Car extends Vehicle {
         this.gear = gear;
         this.type = type;
     }
+
+    public Gear getGear() {
+        return gear;
+    }
+
+    public CarType getType() {
+        return this.type;
+    }
 }

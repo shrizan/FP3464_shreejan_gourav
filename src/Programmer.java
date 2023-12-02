@@ -17,10 +17,26 @@ public class Programmer extends Employee {
     public Programmer(String name, int birthYear, int nbProjects, int rate, Vehicle vehicle) {
         super(name, birthYear, 0, rate, vehicle);
         this.nProjects = nbProjects;
+        System.out.println("We have a new employee: " + name + ", " + "a programmer.");
     }
 
     @Override
     public double annualIncome() {
-        return getMonthlyIncome() * 12 + GAIN_FACTOR_PROJECTS * nProjects;
+        return getMonthlyIncome() * 12 + GAIN_FACTOR_PROJECTS * nProjects + super.annualIncome();
+    }
+
+    @Override
+    public String toString() {
+        return String.format("""
+                        %s
+                        %s has an Occupation rate: %d%% and completed %d projects.
+                        His/Her estimated annual income is %.1f
+                        """,
+                super.toString(),
+                getName(),
+                getRate(),
+                nProjects,
+                annualIncome()
+        ).trim();
     }
 }

@@ -10,4 +10,20 @@ public abstract class Vehicle {
         this.color = color;
         this.category = category;
     }
+
+    public String getMake() {
+        return make;
+    }
+
+    public String getPlate() {
+        return plate;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public VehicleType getCategory() {
+        return category;
+    }
 }
