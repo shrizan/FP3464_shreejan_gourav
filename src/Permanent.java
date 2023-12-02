@@ -44,7 +44,7 @@ public class Permanent extends Contract {
 
     @Override
     public double employeeMonthlySalary() {
-        return  (monthlySalary + (isMarried() ? nbChildren * bonusPerChildPerMonth : 0)) * accumulatedDays();
+        return (monthlySalary + (isMarried() ? nbChildren * bonusPerChildPerMonth : 0)) * accumulatedDays();
     }
 
     private double accumulatedDays() {

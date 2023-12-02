@@ -19,9 +19,9 @@ public class Temporary extends Contract {
     public String toString() {
         return String.format(
                 """
-            he is a temporary employee with %.1f
-            hourly salary and he has worked for %d hours
-            """,
+                        he is a temporary employee with %.1f
+                        hourly salary and he has worked for %d hours
+                        """,
                 hourlySalary,
                 accumulatedHours
         );
@@ -29,6 +29,6 @@ public class Temporary extends Contract {
 
     @Override
     public double employeeMonthlySalary() {
-        return getHourlySalary()*getAccumulatedHours();
+        return getHourlySalary() * getAccumulatedHours();
     }
 }
