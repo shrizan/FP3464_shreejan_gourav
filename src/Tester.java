@@ -13,6 +13,11 @@ public class Tester extends Employee {
     }
 
     @Override
+    public String getUserType() {
+        return "Tester";
+    }
+
+    @Override
     public double annualIncome() {
         return getMonthlyIncome() * 12 + nbBugs * GAIN_FACTOR_ERROR + super.annualIncome();
     }

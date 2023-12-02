@@ -22,20 +22,8 @@ public class Permanent extends Contract {
                 """, married, nbChildren, accumulatedDays, monthlySalary);
     }
 
-    public int getNbChildren() {
-        return nbChildren;
-    }
-
     public boolean isMarried() {
         return married;
-    }
-
-    public double getMonthlySalary() {
-        return monthlySalary;
-    }
-
-    public int getBonusPerChildPerMonth() {
-        return bonusPerChildPerMonth;
     }
 
     public int getAccumulatedDays() {

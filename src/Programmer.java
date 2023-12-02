@@ -21,6 +21,11 @@ public class Programmer extends Employee {
     }
 
     @Override
+    public String getUserType() {
+        return "Programmer";
+    }
+
+    @Override
     public double annualIncome() {
         return getMonthlyIncome() * 12 + GAIN_FACTOR_PROJECTS * nProjects + super.annualIncome();
     }
