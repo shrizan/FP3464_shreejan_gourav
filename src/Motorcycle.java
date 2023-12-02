@@ -11,7 +11,12 @@ public class Motorcycle extends Vehicle {
     }
 
     @Override
+    public String getVehicleType() {
+        return "has a motorcycle";
+    }
+
+    @Override
     public String toString() {
-        return super.toString() + (sidecar?"\n\t- with sidecar" : "\n\t- without sidecar");
+        return super.toString() + (sidecar ? "\n\t- with sidecar" : "\n\t- without sidecar");
     }
 }

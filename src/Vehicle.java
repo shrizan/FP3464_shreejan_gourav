@@ -4,27 +4,13 @@ public abstract class Vehicle {
     private String color;
     private VehicleType category;
 
+    abstract public String getVehicleType();
+
     public Vehicle(String make, String plate, String color, VehicleType category) {
         this.make = make;
         this.plate = plate;
         this.color = color;
         this.category = category;
-    }
-
-    public String getMake() {
-        return make;
-    }
-
-    public String getPlate() {
-        return plate;
-    }
-
-    public String getColor() {
-        return color;
-    }
-
-    public VehicleType getCategory() {
-        return category;
     }
 
     @Override

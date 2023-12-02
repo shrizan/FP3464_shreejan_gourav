@@ -24,6 +24,11 @@ public class Manager extends Employee {
     }
 
     @Override
+    public String getUserType() {
+        return "Manager";
+    }
+
+    @Override
     public double annualIncome() {
         return getMonthlyIncome() * 12
                 + GAIN_FACTOR_CLIENT * nbClients

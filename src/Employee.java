@@ -33,14 +33,12 @@ abstract public class Employee {
     public int getRate() {
         return rate;
     }
-
+//make abstract method
     public String getVehicleType() {
-        return vehicle == null ? "" : vehicle instanceof Car ? "has a car" : vehicle instanceof Motorcycle ? "has a motorcycle" : "";
+        return vehicle == null ? "":vehicle.getVehicleType();
     }
-
-    public String getUserType() {
-        return (this instanceof Manager ? "Manager" : (this instanceof Programmer ? "Programmer" : "Tester"));
-    }
+//make abstract
+    abstract public String getUserType();
 
     public double annualIncome() {
         double monthly = contractInfo == null ? 0 : contractInfo.employeeMonthlySalary();
