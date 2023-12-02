@@ -15,4 +15,9 @@ public class Car extends Vehicle {
     public CarType getType() {
         return this.type;
     }
+
+    @Override
+    public String toString() {
+        return super.toString()+ String.format("\n\t- gear: %s\n\t- type: %s\n\t", gear,type.toString());
+    }
 }

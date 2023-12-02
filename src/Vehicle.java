@@ -26,4 +26,9 @@ public abstract class Vehicle {
     public VehicleType getCategory() {
         return category;
     }
+
+    @Override
+    public String toString() {
+        return String.format("\n\t- make: %s\n\t- plate: %s\n\t- color:%s\n\t- category:%s", make, plate, color, category.toString());
+    }
 }

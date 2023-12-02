@@ -34,36 +34,8 @@ abstract public class Employee {
         return rate;
     }
 
-    public String getMake() {
-        return vehicle == null ? "" : vehicle.getMake();
-    }
-
-    public String getPlate() {
-        return vehicle == null ? "" : vehicle.getPlate();
-    }
-
-    public String getColor() {
-        return vehicle == null ? "" : vehicle.getColor();
-    }
-
-    public String getCategory() {
-        return vehicle == null ? "" : vehicle.getCategory().toString();
-    }
-
     public String getVehicleType() {
         return vehicle == null ? "" : vehicle instanceof Car ? "has a car" : vehicle instanceof Motorcycle ? "has a motorcycle" : "";
-    }
-
-    public String getGear() {
-        return vehicle != null ? vehicle instanceof Car ? "- gear type: " + ((Car) vehicle).getGear().toString() : "" : "";
-    }
-
-    public String getCarType() {
-        return vehicle == null ? "" : vehicle instanceof Car ? "- type: " + ((Car) vehicle).getType().toString() : "";
-    }
-
-    public String hasSideCar() {
-        return vehicle == null ? "" : vehicle instanceof Motorcycle ? (((Motorcycle) vehicle).isSidecar() ? "- with sidecar" : "- without sidecar") : "";
     }
 
     public String getUserType() {
@@ -86,34 +58,16 @@ abstract public class Employee {
 
     @Override
     public String toString() {
-        String baseToString = String.format("""
+        return String.format("""
                         Name: %s, a %s
                         Age: %d
-                        Employee %s
-                            - make: %s
-                            - plate: %s
-                            - color: %s
-                            - category: %s
+                        Employee %s%s
                         """,
                 getName(),
                 getUserType(),
                 getAge(),
                 getVehicleType(),
-                getMake(),
-                getPlate(),
-                getColor(),
-                getCategory()
-        );
-        baseToString = baseToString.trim();
-        if (!getGear().isEmpty()) {
-            baseToString += "\n\t" + getGear();
-        }
-        if (!getCarType().isEmpty()) {
-            baseToString += "\n\t" + getCarType();
-        }
-        if (!hasSideCar().isEmpty()) {
-            baseToString += "\n\t" + hasSideCar();
-        }
-        return baseToString;
+                vehicle.toString()
+        ).trim();
     }
 }

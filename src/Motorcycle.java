@@ -9,4 +9,9 @@ public class Motorcycle extends Vehicle {
     public boolean isSidecar() {
         return sidecar;
     }
+
+    @Override
+    public String toString() {
+        return super.toString() + (sidecar?"\n\t- with sidecar" : "\n\t- without sidecar");
+    }
 }
