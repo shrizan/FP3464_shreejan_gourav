@@ -1,6 +1,20 @@
 public enum VehicleType {
     Sport,
-    RACE,
-    NOT_FOR_RACE,
-    Family
+    RACE("Race Motorcycle"),
+    NOT_FOR_RACE("Not for race"),
+    Family;
+
+    private String type;
+
+    VehicleType() {
+    }
+
+    VehicleType(String type) {
+        this.type = type;
+    }
+
+    @Override
+    public String toString() {
+        return type != null ? type : super.toString();
+    }
 }

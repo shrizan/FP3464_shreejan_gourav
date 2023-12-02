@@ -17,7 +17,6 @@ public class Programmer extends Employee {
     public Programmer(String name, int birthYear, int nbProjects, int rate, Vehicle vehicle) {
         super(name, birthYear, 0, rate, vehicle);
         this.nProjects = nbProjects;
-        System.out.println("We have a new employee: " + name + ", " + "a programmer.");
     }
 
     @Override

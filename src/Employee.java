@@ -16,6 +16,7 @@ abstract public class Employee {
         this.monthlyIncome = monthlyIncome;
         this.rate = rate > 100 ? 100 : (Math.max(rate, 10));
         this.vehicle = vehicle;
+        System.out.println("We have a new employee: " + name + ", " + "a " + getUserType().toLowerCase() + ".");
     }
 
     public double getMonthlyIncome() {
@@ -33,11 +34,13 @@ abstract public class Employee {
     public int getRate() {
         return rate;
     }
-//make abstract method
+
+    //make abstract method
     public String getVehicleType() {
-        return vehicle == null ? "":vehicle.getVehicleType();
+        return vehicle == null ? "" : vehicle.getVehicleType();
     }
-//make abstract
+
+    //make abstract
     abstract public String getUserType();
 
     public double annualIncome() {

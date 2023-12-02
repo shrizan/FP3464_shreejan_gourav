@@ -9,7 +9,6 @@ public class Tester extends Employee {
     public Tester(String name, int birthYear, int nbBugs, int rate, Vehicle employeeVehicle) {
         super(name, birthYear, 0, rate, employeeVehicle);
         this.nbBugs = nbBugs;
-        System.out.println("We have a new employee: " + name + ", " + "a tester.");
     }
 
     @Override

@@ -20,7 +20,6 @@ public class Manager extends Employee {
         super(name, birthYear, 0, rate, vehicle);
         this.nbClients = nbClients;
         this.nTravelDays = nTravelDays;
-        System.out.println("We have a new employee: " + name + ", " + "a manager.");
     }
 
     @Override
